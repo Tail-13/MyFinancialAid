@@ -1,0 +1,28 @@
+2024-12-09T05:44:02.788Z [error]: Internal Server Error
+2024-12-09T05:45:10.746Z [error]: Internal Server Error
+2024-12-09T06:06:39.341Z [warn]: New user not created, request incomplete. Missing username, email, or password.
+2024-12-09T06:07:08.305Z [warn]: New user not created, request incomplete. Missing username, email, or password.
+2024-12-09T06:08:28.178Z [error]: error creating user: column "active" does not exist
+2024-12-09T06:09:08.180Z [error]: error creating user: column "active" does not exist
+2024-12-09T06:09:54.585Z [error]: error creating user: column "active" does not exist
+2024-12-09T06:10:07.930Z [error]: error creating user: column "active" does not exist
+2024-12-09T06:12:39.823Z [error]: error creating user: column "active" does not exist
+2024-12-09T06:13:12.254Z [warn]: New user not created, request incomplete. Missing username, email, or password.
+2024-12-09T06:13:51.973Z [error]: error creating user: column "active" does not exist
+2024-12-09T06:14:00.552Z [warn]: New user not created, request incomplete. Missing username, email, or password.
+2024-12-09T06:31:47.400Z [info]: server running on port 5000
+2024-12-09T06:33:36.607Z [info]: server running on port 5000
+2024-12-09T06:33:44.774Z [info]: server running on port 5000
+2024-12-09T06:34:30.508Z [info]: server running on port 5000
+2024-12-09T06:34:47.208Z [info]: server running on port 5000
+2024-12-09T06:35:11.957Z [info]: server running on port 5000
+$[{timestamp}~info]: server running on port 5000
+[2024-12-09T06:36:07.657Z~info]: server running on port 5000
+[2024-12-09T06:36:20.188Z info]: server running on port 5000
+[2024-12-09T06:38:44.178Z [32minfo[39m]: server running on port 5000
+[2024-12-09T06:39:39.436Z [32minfo[39m]: server running on port 5000
+[2024-12-09T06:39:58.973Z [32minfo[39m]: server running on port 5000
+[2024-12-09T06:40:13.246Z [32minfo[39m]: server running on port 5000
+[2024-12-09T06:40:23.955Z [32minfo[39m]: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-09T06:40:46.017Z: [32mserver running on port 5000[39m
+[[33mwarn[39m]2024-12-09T06:41:00.106Z: [33mNew user not created, request incomplete. Missing username, email, or password.[39m

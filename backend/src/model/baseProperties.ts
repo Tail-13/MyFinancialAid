@@ -8,5 +8,5 @@ export const baseProperties = {
     createdAt: timestamp('createdAt').notNull().defaultNow(),
     updatedAt: timestamp('updated_at'),
     deletedAt: timestamp('deleted_at'),
-    active: boolean('active').default(true)
+    isDeleted: boolean('is_deleted').default(false)
 }
