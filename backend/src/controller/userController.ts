@@ -23,6 +23,7 @@ export const getUsers = async (req: Request, res: Response) => {
 
         const totalPages = Math.ceil(totalCount.length / entries)
 
+        logger.info('fetch user')
         if (data.length < 1) {
             return res.status(204).json({
                 message: 'no data found'
