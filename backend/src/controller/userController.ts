@@ -1,9 +1,11 @@
 import { count, sql } from 'drizzle-orm'
-import db from '../config/db'
+import db from '../utilites/db'
 import { users } from '../model/userModel'
 import { Request, Response } from 'express'
-import logger from '../config/logger'
+import logger from '../utilites/logger'
 import { error } from 'winston'
+import { HashString } from '../utilites/hash'
+import { InternalServerError } from '../utilites/errorHandling'
 
 export const getUsers = async (req: Request, res: Response) => {
     try {
@@ -37,20 +39,7 @@ export const getUsers = async (req: Request, res: Response) => {
         })
 
     } catch (err) {
-        if (err instanceof Error) {
-            logger.error('error creating user: ' + err.message);
-            return res.status(500).json({
-                message: 'internal server error',
-                error: err.message
-            });
-        } else {
-            // If err is not an instance of Error, handle it as a generic unknown error
-            logger.error('an unknown error occurred');
-            return res.status(500).json({
-                message: 'internal server error',
-                error: 'an unknown error occurred'
-            });
-        }
+        InternalServerError(err, res)
     }
 }
 
@@ -64,22 +53,21 @@ export const createUsers = async (req: Request, res: Response) => {
                 message: 'Username, email, and password are required!'
             });
         }
+
+        const hashedPassword = await HashString(password, username)
+
+        const data = await db
+            .insert(users)
+            .values({
+                username: username,
+                email: email,
+                password: hashedPassword
+            })
+
         res.status(200).json({
-            message: `new user ${req.body.username} created`,
+            message: `new user: ${req.body.username} created`,
         })
     } catch (err) {
-        if (err instanceof Error) {
-            logger.error('error creating user: ' + err.message);
-            return res.status(500).json({
-                message: 'internal server error',
-                error: err.message
-            });
-        } else {
-            logger.error('An unknown error occurred');
-            return res.status(500).json({
-                message: 'internal server error',
-                error: 'an unknown error occurred'
-            });
-        }
+        InternalServerError(err, res)
     }
 };

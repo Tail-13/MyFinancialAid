@@ -3,7 +3,7 @@ import cors from 'cors';
 import 'dotenv/config';
 import { drizzle } from 'drizzle-orm/node-postgres';
 import router from './route/userRouter';
-import logger from './config/logger';
+import logger from './utilites/logger';
 import swaggerUi from 'swagger-ui-express'; // Import swagger-ui-express
 import swaggerJsdoc from 'swagger-jsdoc'; // Import swagger-jsdoc
 
