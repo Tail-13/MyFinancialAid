@@ -98,3 +98,276 @@ $[{timestamp}~info]: server running on port 5000
 [[32minfo[39m]2024-12-10T14:00:36.226Z: [32mserver running on port 5000[39m
 [[32minfo[39m]2024-12-10T14:01:00.312Z: [32mserver running on port 5000[39m
 [[32minfo[39m]2024-12-10T14:01:35.171Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-10T14:01:50.893Z: [32mserver running on port 5000[39m
+[[31merror[39m]2024-12-10T14:02:15.560Z: [31mError creating user: duplicate key value violates unique constraint "users_username_unique"[39m
+[[32minfo[39m]2024-12-11T02:09:37.324Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:09:48.702Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:09:58.311Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:10:37.126Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:11:13.335Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:12:29.093Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:12:50.867Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:13:08.358Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:13:28.086Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:13:56.366Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:14:07.666Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:14:21.618Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:15:04.210Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:15:33.444Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:15:40.065Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:18:23.714Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:18:34.204Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:19:10.436Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:19:32.332Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:20:13.910Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:20:24.841Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:21:41.929Z: [32mserver running on port 5000[39m
+[[33mwarn[39m]2024-12-11T02:21:45.533Z: [33mNew user not created, password not valid, Password must be at least 8 characters long.[39m
+[33mPassword must contain at least one uppercase letter.[39m
+[33mPassword must contain at least one lowercase letter.[39m
+[33mPassword must contain at least one special character.[39m
+[33m[39m
+[[31merror[39m]2024-12-11T02:21:45.829Z: [31mError creating user: duplicate key value violates unique constraint "users_username_unique"[39m
+[[33mwarn[39m]2024-12-11T02:21:56.788Z: [33mNew user not created, password not valid, Password must be at least 8 characters long.[39m
+[33mPassword must contain at least one uppercase letter.[39m
+[33mPassword must contain at least one lowercase letter.[39m
+[33mPassword must contain at least one special character.[39m
+[33m[39m
+[[32minfo[39m]2024-12-11T02:23:01.432Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:23:12.607Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:23:18.897Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:23:33.082Z: [32mserver running on port 5000[39m
+[[33mwarn[39m]2024-12-11T02:23:37.713Z: [33mNew user not created, password not valid, Password must be at least 8 characters long.[39m
+[33mPassword must contain at least one uppercase letter.[39m
+[33mPassword must contain at least one lowercase letter.[39m
+[33mPassword must contain at least one special character.[39m
+[33m[39m
+[[32minfo[39m]2024-12-11T02:24:46.185Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:25:26.261Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:25:42.663Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:26:21.842Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:26:29.633Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:26:47.438Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:27:03.065Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:27:23.957Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:27:37.219Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:27:49.298Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:28:10.407Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:28:22.466Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:28:28.612Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:28:40.411Z: [32mserver running on port 5000[39m
+[[33mwarn[39m]2024-12-11T02:29:32.976Z: [33mNew user not created, invalid password[39m
+[[31merror[39m]2024-12-11T02:29:44.253Z: [31mError creating user: duplicate key value violates unique constraint "users_username_unique"[39m
+[[32minfo[39m]2024-12-11T02:30:44.690Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:30:58.167Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:31:03.754Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:31:23.622Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:31:57.135Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:32:05.891Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:32:21.264Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:32:27.886Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:32:35.969Z: [32mserver running on port 5000[39m
+[[31merror[39m]2024-12-11T02:32:37.367Z: [31mError creating user: invalid input syntax for type boolean: "tes"[39m
+[[32minfo[39m]2024-12-11T02:33:27.665Z: [32mserver running on port 5000[39m
+[[33mwarn[39m]2024-12-11T02:33:31.836Z: [33mNew user not created, user already exist.[39m
+[[32minfo[39m]2024-12-11T02:34:12.399Z: [32mserver running on port 5000[39m
+[[33mwarn[39m]2024-12-11T02:34:14.831Z: [33mNew user not created, user already exist.[39m
+[[32minfo[39m]2024-12-11T02:34:47.747Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T02:35:47.507Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T03:16:27.223Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T03:27:40.553Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T03:28:02.249Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:22:28.902Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:22:38.210Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:23:50.694Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:24:28.652Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:24:38.459Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:24:59.303Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:25:37.741Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:25:50.727Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:26:31.841Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:26:44.264Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:28:25.625Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:28:55.838Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:29:01.572Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:29:27.435Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:30:44.967Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:30:53.810Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:31:12.992Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:31:27.354Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:31:45.721Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:32:35.037Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:41:59.297Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:42:47.192Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T07:43:11.402Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T08:35:36.927Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T08:35:53.586Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T08:59:38.638Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:01:22.390Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:03:46.533Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:14:04.772Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:14:17.223Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:14:44.142Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:14:56.783Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:15:07.467Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:15:22.972Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:16:01.007Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:16:32.121Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:16:38.997Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:16:49.192Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:17:01.552Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:17:19.287Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:18:00.693Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:18:16.191Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:18:26.356Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:18:43.892Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:19:01.078Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:19:13.015Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:19:24.866Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:19:57.197Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:20:07.725Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:20:40.507Z: [32mserver running on port 5000[39m
+[[33mwarn[39m]2024-12-11T09:21:55.371Z: [33mNew user not created, request incomplete. Missing username, email, or password.[39m
+[[32minfo[39m]2024-12-11T09:25:16.563Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:26:12.474Z: [32m{[39m
+[32m  info: {[39m
+[32m    title: 'User API',[39m
+[32m    version: '1.0.0',[39m
+[32m    description: 'API for managing users'[39m
+[32m  },[39m
+[32m  servers: [ { url: 'http://localhost:5000' } ],[39m
+[32m  swagger: '2.0',[39m
+[32m  paths: {},[39m
+[32m  definitions: {},[39m
+[32m  responses: {},[39m
+[32m  parameters: {},[39m
+[32m  securityDefinitions: {},[39m
+[32m  tags: [][39m
+[32m}[39m
+[[32minfo[39m]2024-12-11T09:26:12.502Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:27:37.995Z: [32m{[39m
+[32m  info: {[39m
+[32m    title: 'User API',[39m
+[32m    version: '1.0.0',[39m
+[32m    description: 'API for managing users'[39m
+[32m  },[39m
+[32m  servers: [ { url: 'http://localhost:5000' } ],[39m
+[32m  swagger: '2.0',[39m
+[32m  paths: {},[39m
+[32m  definitions: {},[39m
+[32m  responses: {},[39m
+[32m  parameters: {},[39m
+[32m  securityDefinitions: {},[39m
+[32m  tags: [][39m
+[32m}[39m
+[[32minfo[39m]2024-12-11T09:27:38.012Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:27:46.656Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:32:59.665Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:33:46.310Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:35:25.055Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:36:56.866Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:38:14.903Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:38:36.326Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:39:05.595Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:39:39.034Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:40:20.302Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:41:25.419Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:41:54.808Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:42:52.216Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:43:36.830Z: [32mserver running on port 5000[39m
+[[31merror[39m]2024-12-11T09:43:57.684Z: [31mError creating user: column "updated_by" does not exist[39m
+[[32minfo[39m]2024-12-11T09:45:06.651Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:45:26.112Z: [32mfetch user[39m
+[[32minfo[39m]2024-12-11T09:52:11.023Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:52:18.428Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:52:28.805Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:52:36.471Z: [32mfetch user[39m
+[[32minfo[39m]2024-12-11T09:53:17.174Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:53:22.890Z: [32mfetch user[39m
+[[32minfo[39m]2024-12-11T09:53:30.273Z: [32mfetch user[39m
+[[32minfo[39m]2024-12-11T09:54:08.811Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:54:09.570Z: [32mall user fetched[39m
+[[32minfo[39m]2024-12-11T09:54:40.029Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:54:40.620Z: [32mall user fetched[39m
+[[32minfo[39m]2024-12-11T09:57:40.679Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:58:06.770Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:58:22.401Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:58:30.233Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:58:46.296Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T09:58:56.613Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:00:12.123Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:00:42.692Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:01:33.197Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:01:41.049Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:01:50.885Z: [32mall user fetched[39m
+[[32minfo[39m]2024-12-11T10:04:59.515Z: [32mall user fetched[39m
+[[33mwarn[39m]2024-12-11T10:05:21.468Z: [33mNew user not created, request incomplete. Missing username, email, or password.[39m
+[[32minfo[39m]2024-12-11T10:06:30.053Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:14:05.501Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:15:29.400Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:17:29.854Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:18:21.038Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:20:10.068Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:20:42.898Z: [32mall user fetched[39m
+[[32minfo[39m]2024-12-11T10:22:07.878Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:22:20.138Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:23:09.568Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:26:35.092Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:28:07.049Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T10:58:40.089Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:12:10.905Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:12:37.700Z: [32mall user fetched[39m
+[[32minfo[39m]2024-12-11T11:15:22.737Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:16:14.125Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:16:42.454Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:17:16.056Z: [32mall user fetched[39m
+[[32minfo[39m]2024-12-11T11:19:31.289Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:19:49.913Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:21:02.350Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:21:10.671Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:21:36.062Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:44:40.658Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:44:51.820Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:45:03.643Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:45:43.191Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:45:48.780Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:46:17.305Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:46:58.382Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:47:31.199Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:47:43.763Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:47:52.351Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:48:05.660Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:48:57.319Z: [32mall user fetched[39m
+[[32minfo[39m]2024-12-11T11:50:24.909Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:51:20.860Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:55:10.406Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:55:17.113Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:55:29.373Z: [32mall user fetched[39m
+[[32minfo[39m]2024-12-11T11:56:30.786Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:56:40.284Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:56:57.210Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:57:14.507Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:57:44.562Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:57:46.540Z: [32mall user fetched[39m
+[[32minfo[39m]2024-12-11T11:59:38.917Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T11:59:46.505Z: [32mall user fetched[39m
+[[32minfo[39m]2024-12-11T12:00:13.164Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:00:17.341Z: [32mall user fetched[39m
+[[32minfo[39m]2024-12-11T12:01:39.607Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:01:51.464Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:03:46.221Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:04:00.916Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:04:19.008Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:04:41.925Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:05:18.843Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:06:35.819Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:06:42.250Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:06:48.051Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:06:53.732Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:07:06.213Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:08:50.605Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:09:17.336Z: [32mserver running on port 5000[39m
+[[33mwarn[39m]2024-12-11T12:09:19.695Z: [33muser 1 not restored[39m
+[[32minfo[39m]2024-12-11T12:09:48.734Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:10:00.955Z: [32mserver running on port 5000[39m
+[[32minfo[39m]2024-12-11T12:10:35.606Z: [32mserver running on port 5000[39m

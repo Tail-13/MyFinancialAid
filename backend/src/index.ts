@@ -1,4 +1,4 @@
-import express, { Request, Response, Router } from 'express';
+import express, { Request, Response } from 'express';
 import cors from 'cors';
 import 'dotenv/config';
 import { drizzle } from 'drizzle-orm/node-postgres';
@@ -11,30 +11,25 @@ const app = express();
 const port = process.env.APP_PORT;
 
 // Swagger setup
-const swaggerOptions = {
-  swaggerDefinition: {
+const options = {
+  definition: {
+    MFA: '3.0.0',
     info: {
-      title: 'User API',
+      title: process.env.APP_NAME + '',
       version: '1.0.0',
-      description: 'API for managing users',
     },
-    servers: [
-      {
-        url: `http://localhost:${port}`,
-      },
-    ],
   },
-  apis: ['./route/**/*.ts'], // Look for all `.ts` files in the route folder and subfolders
+  apis: ['./src/route/*.ts'], // files containing annotations as above
 };
 
-const swaggerDocs = swaggerJsdoc(swaggerOptions);
+const swaggerDocs = swaggerJsdoc(options);
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
 // Swagger UI setup
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Routes
 app.use('/api', router);

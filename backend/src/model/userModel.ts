@@ -7,6 +7,8 @@ export const users = pgTable('users', {
     password: varchar('password', {length : 255}),
     createdAt: timestamp('createdAt').notNull().defaultNow(),
     updatedAt: timestamp('updated_at'),
+    updatedBy: integer('updated_by'),
     deletedAt: timestamp('deleted_at'),
+    deletedBy: integer('deleted_by'),
     isDeleted: boolean('is_deleted').default(false)
 })
