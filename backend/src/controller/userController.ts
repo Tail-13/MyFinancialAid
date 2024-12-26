@@ -3,10 +3,9 @@ import db from '../utilites/db'
 import { users } from '../model/userModel'
 import { Request, Response } from 'express'
 import logger from '../utilites/logger'
-import { HashString } from '../utilites/hash'
+import { HashString } from '../utilites/securities/hash'
 import { InternalServerError } from '../utilites/errorHandling'
 import { CustomValidator } from '../utilites/validation'
-import { error } from 'winston'
 
 export const getUsers = async (req: Request, res: Response) => {
     try {
@@ -53,7 +52,7 @@ export const getUsers = async (req: Request, res: Response) => {
     }
 }
 
-export const createUsers = async (req: Request, res: Response) => {
+export const createUser = async (req: Request, res: Response) => {
     try {
         const { username, email, password } = req.body;
 
@@ -87,8 +86,8 @@ export const createUsers = async (req: Request, res: Response) => {
         }
 
         if(password) {
-            const passwordErrors = CustomValidator.passwordValidation(password)
-            if(passwordErrors.length > 0){
+            const passwordErrors = CustomValidator.validPassword(password)
+            if(passwordErrors.error){
                 logger.warn('New user not created, password is invalid')
                 return res.status(400).json({
                     message: 'User not created',
@@ -119,15 +118,8 @@ export const editUsers = async (req: Request, res: Response) => {
     const { id } = req.params;
     const { username, password, email } = req.body;
 
-    // Validate 'id' before database query
-    if (!id) {
-        return res.status(400).json({
-            message: 'User not updated',
-            error: 'id is required'
-        });
-    }
-
     try {
+        logger.info(`editing user ${id}`)
         const user = await db
             .select()
             .from(users)
@@ -135,9 +127,9 @@ export const editUsers = async (req: Request, res: Response) => {
             .limit(1);
 
         if (user.length === 0) {
+            
             return res.status(400).json({
-                message: 'User not updated',
-                error: 'User does not exist'
+                message: 'user not updated, user not found',
             });
         }
 
@@ -147,19 +139,18 @@ export const editUsers = async (req: Request, res: Response) => {
             if (!CustomValidator.isEmail(email)) {
                 logger.warn(`User with ID ${id} not updated, invalid email`);
                 return res.status(400).json({
-                    message: 'User not updated',
-                    error: 'Email format must be valid'
+                    message: 'User not updated, invalid email format',
                 });
             }
             updateUser.email = email;
         }
 
         if (password) {
-            const passwordErrors = CustomValidator.passwordValidation(password);
-            if (passwordErrors.length > 0) {
+            const passwordErrors = CustomValidator.validPassword(password);
+            if (passwordErrors.error) {
                 logger.warn(`User with ID ${id} not updated, invalid password`);
                 return res.status(400).json({
-                    message: 'User not updated',
+                    message: 'User not updated, invalid password format',
                     error: passwordErrors
                 });
             }
@@ -211,8 +202,7 @@ export const deleteUsers = async (req: Request, res: Response) => {
         if(existingUser.length == 0){
             logger.warn(`user ${id} not deleted`)
             return res.status(400).json({
-                message: 'user not deleted',
-                error: 'user not found'
+                message: 'user not deleted, user not found',
             })
         }
     
@@ -249,8 +239,7 @@ export const restoreUsers = async (req: Request, res: Response) => {
         if(existingUser.length == 0){
             logger.warn(`user ${id} not restored, user not found`)
             return res.status(400).json({
-                message: 'user not restored',
-                error: 'user not found'
+                message: 'user not restored, user not found'
             })
         }
     

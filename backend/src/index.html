@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searchable Multi-Select Modal with Checkmark</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .tags-input {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding: 5px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            cursor: pointer;
+        }
+        .tag {
+            background-color: #0d6efd;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        .tag-close {
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .selected-item::before {
+            content: "✔";
+            color: green;
+            margin-right: 10px;
+        }
+        .selected-item {
+            background-color: #d1e7dd !important;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <label for="multiSelect" class="form-label">Multi-Select Input</label>
+    <div id="multiSelect" class="tags-input">
+        <span class="placeholder">Click to select...</span>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="selectionModal" tabindex="-1" aria-labelledby="selectionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="selectionModalLabel">Select Items</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search...">
+                <ul class="list-group" id="itemList">
+                    <li class="list-group-item" data-value="1">Option 1</li>
+                    <li class="list-group-item" data-value="2">Option 2</li>
+                    <li class="list-group-item" data-value="3">Option 3</li>
+                    <li class="list-group-item" data-value="4">Option 4</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const multiSelect = document.getElementById('multiSelect');
+    const itemList = document.getElementById('itemList');
+    const searchInput = document.getElementById('searchInput');
+    const modal = new bootstrap.Modal(document.getElementById('selectionModal'));
+    const selectedItems = new Set();
+
+    function updateTags() {
+        multiSelect.innerHTML = '';
+        if (selectedItems.size === 0) {
+            multiSelect.innerHTML = '<span class="placeholder">Click to select...</span>';
+            return;
+        }
+        selectedItems.forEach(item => {
+            const tag = document.createElement('span');
+            tag.className = 'tag';
+            tag.textContent = item.description;
+
+            const close = document.createElement('span');
+            close.className = 'tag-close';
+            close.innerHTML = '&times;';
+            close.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent modal opening
+                selectedItems.delete(item);
+                updateTags();
+                updateModalSelection(); // Reflect changes in the modal
+            });
+
+            tag.appendChild(close);
+
+            tag.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent modal opening
+                selectedItems.delete(item);
+                updateTags();
+                updateModalSelection(); // Reflect changes in the modal
+            });
+
+            multiSelect.appendChild(tag);
+        });
+    }
+
+    function updateModalSelection() {
+        const listItems = itemList.querySelectorAll('.list-group-item');
+        listItems.forEach(item => {
+            const value = item.dataset.value;
+            if ([...selectedItems].some(selected => selected.value === value)) {
+                item.classList.add('selected-item');
+            } else {
+                item.classList.remove('selected-item');
+            }
+        });
+    }
+
+    itemList.addEventListener('click', (e) => {
+        if (e.target.classList.contains('list-group-item')) {
+            const value = e.target.dataset.value;
+            const description = e.target.textContent;
+            const item = { value, description };
+
+            if ([...selectedItems].some(selected => selected.value === value)) {
+                selectedItems.forEach(selected => {
+                    if (selected.value === value) selectedItems.delete(selected);
+                });
+            } else {
+                selectedItems.add(item);
+            }
+            updateTags();
+            updateModalSelection();
+        }
+    });
+
+    multiSelect.addEventListener('click', (e) => {
+        if (e.target === multiSelect || e.target.classList.contains('placeholder')) {
+            modal.show(); // Only open modal when clicking directly on the container or placeholder
+        }
+    });
+
+    searchInput.addEventListener('input', () => {
+        const filter = searchInput.value.toLowerCase();
+        const listItems = itemList.querySelectorAll('.list-group-item');
+        listItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            item.style.display = text.includes(filter) ? '' : 'none';
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', updateTags);
+</script>
+</body>
+</html>

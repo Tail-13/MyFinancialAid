@@ -4,7 +4,7 @@ export class CustomValidator {
         return emailRegex.test(email);
     };
 
-    static passwordValidation = (
+    static validPassword = (
         password: string,
         minLength: number = 8,
         requireUppercase: boolean = true,
@@ -12,7 +12,7 @@ export class CustomValidator {
         requireDigits: boolean = true,
         requireSpecialChars: boolean = true,
         disallowSpaces: boolean = true
-      ): string[] => {
+      ) => {
         const errors: string[] = [];
     
         // Check for minimum length
@@ -46,6 +46,6 @@ export class CustomValidator {
         }
     
         // Return errors if any, otherwise empty array
-        return errors;
+        return {error: errors};
       }
 }

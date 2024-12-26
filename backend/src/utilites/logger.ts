@@ -1,8 +1,9 @@
 import winston from 'winston';
 
 // Define log format
-const logFormat = winston.format.printf(({ timestamp, level, message }) => {
-  return `[${level}]${timestamp}: ${message}`;
+const logFormat = winston.format.printf(({ timestamp, level, message, statusCode }) => {
+  const status = statusCode ? ` [StatusCode: ${statusCode}]` : '';
+  return `[${level}]${timestamp}: {${status}} ${message}`;
 });
 
 // Create the logger
