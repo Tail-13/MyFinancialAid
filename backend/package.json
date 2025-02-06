@@ -1,0 +1,26 @@
+{
+  "name": "mfa_be",
+  "version": "0.0.1",
+  "description": "MyFinancialAid Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "accounting"
+  ],
+  "author": "tail13",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.3.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "prisma": "^6.3.1",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
