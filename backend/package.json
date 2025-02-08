@@ -4,6 +4,7 @@
   "description": "MyFinancialAid Backend",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   }

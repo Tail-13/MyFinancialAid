@@ -9,7 +9,6 @@ const app = express()
 
 app.use(express.json())
 
-
 app.listen(Number(APP_PORT), () => {
     logger.info(`server running on port ${Number(APP_PORT)}`)
 })

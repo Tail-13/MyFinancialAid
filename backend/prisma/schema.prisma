@@ -43,7 +43,28 @@ model Account {
   deletedAt DateTime?
 }
 
-model TransactionHeader {
+model Category {
+  id Int @id @default(autoincrement())
+  userId Int
+  name String
+  description String?
+}
+
+model Goal {
+  id Int @id @default(autoincrement())
+  userId Int
+  accountId Int
+  targetAmount Float
+  startDate DateTime
+  endDate DateTime
+}
+
+model Budget {
+  id Int @id @default(autoincrement())
+  userId Int
+}
+
+model Transaction {
   id Int @id @default(autoincrement())
   description String
   date DateTime
