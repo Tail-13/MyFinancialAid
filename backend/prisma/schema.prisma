@@ -14,80 +14,132 @@ datasource db {
 }
 
 model User {
-  id Int @id @default(autoincrement())
+  id       Int    @id @default(autoincrement())
   username String
   password String
 }
 
-model AccountType {
-  id Int @id @default(autoincrement())
-  name String
-  description String?
-  deleted Boolean @default(false)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime?
-  deletedAt DateTime?
+enum AccountType {
+  INCOME
+  EXPENSE
+  ASSET
+  LIABILITY
+  EQUITY
 }
 
 model Account {
-  id Int @id @default(autoincrement())
-  accountTypeId Int
-  userId Int
-  name String
-  description String?
-  deleted Boolean @default(false)
+  id            Int     @id @default(autoincrement())
+  accountType   AccountType
+  userId        Int
+  name          String
+  description   String?
+  balance       Float   @default(0)
+  deleted       Boolean @default(false)
 
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
   updatedAt DateTime?
   deletedAt DateTime?
+
+  createdBy Int
+  updatedBy Int?
+  deletedBy Int?
 }
 
 model Category {
-  id Int @id @default(autoincrement())
-  userId Int
-  name String
+  id          Int     @id @default(autoincrement())
+  userId      Int
+  name        String
   description String?
+
+  deleted Boolean @default(false)
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime?
+  deletedAt DateTime?
+
+  createdBy Int
+  updatedBy Int?
+  deletedBy Int?
 }
 
 model Goal {
-  id Int @id @default(autoincrement())
-  userId Int
-  accountId Int
+  id           Int      @id @default(autoincrement())
+  userId       Int
+  accountId    Int
   targetAmount Float
-  startDate DateTime
-  endDate DateTime
+  startDate    DateTime
+  endDate      DateTime
+
+  deleted Boolean @default(false)
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime?
+  deletedAt DateTime?
+
+  createdBy Int
+  updatedBy Int?
+  deletedBy Int?
 }
 
 model Budget {
-  id Int @id @default(autoincrement())
-  userId Int
+  id           Int      @id @default(autoincrement())
+  userId       Int
+  categoryId   Int
+  targetAmount Float
+  startDate    DateTime
+  endDate      DateTime
+
+  deleted Boolean @default(false)
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime?
+  deletedAt DateTime?
+
+  createdBy Int
+  updatedBy Int?
+  deletedBy Int?
 }
 
 model Transaction {
-  id Int @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   description String
-  date DateTime
+  date        DateTime
+  userId      Int
+
+  transactionDetail TransactionDetail[]
+
   deleted Boolean @default(false)
 
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
   updatedAt DateTime?
   deletedAt DateTime?
+
+  createdBy Int
+  updatedBy Int?
+  deletedBy Int?
 }
 
 enum TransactionType {
-  debit
-  credit
+  DEBIT
+  CREDIT
 }
 
 model TransactionDetail {
-  id Int @id @default(autoincrement())
+  id              Int             @id @default(autoincrement())
   transactionType TransactionType
-  accountId Int
-  amount Float
+  accountId       Int
+  amount          Float
+
+  transaction   Transaction @relation(fields: [transactionId], references: [id])
+  transactionId Int
+
   deleted Boolean @default(false)
 
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
   updatedAt DateTime?
   deletedAt DateTime?
+
+  createdBy Int
+  updatedBy Int?
+  deletedBy Int?
 }
