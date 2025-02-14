@@ -6,6 +6,7 @@ export class HashPassword{
     static hash(password: string) {
         throw new Error("Method not implemented.");
     }
+    
     hash = async (salt: string, password: string): Promise<string> => {
         const hash = await bcrypt.hash(password + salt, saltRounds);
         return hash;

@@ -1,0 +1,163 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./prisma/generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AccessToken {
+  id        Int      @id @default(autoincrement())
+  token     String   @unique
+  userId    Int
+  expiresAt DateTime
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime?
+  deletedAt DateTime?
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  username String  @unique
+  email    String  @unique
+  password String
+  deleted  Boolean @default(false)
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime?
+  deletedAt DateTime?
+}
+
+enum AccountType {
+  INCOME
+  EXPENSE
+  ASSET
+  LIABILITY
+  EQUITY
+}
+
+model Account {
+  id          Int         @id @default(autoincrement())
+  accountType AccountType
+  userId      Int
+  name        String
+  description String?
+  balance     Float       @default(0)
+  deleted     Boolean     @default(false)
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime?
+  deletedAt DateTime?
+
+  createdBy Int
+  updatedBy Int?
+  deletedBy Int?
+}
+
+model Category {
+  id          Int     @id @default(autoincrement())
+  userId      Int
+  name        String
+  description String?
+
+  deleted Boolean @default(false)
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime?
+  deletedAt DateTime?
+
+  createdBy Int
+  updatedBy Int?
+  deletedBy Int?
+}
+
+model Goal {
+  id           Int      @id @default(autoincrement())
+  userId       Int
+  accountId    Int
+  targetAmount Float
+  startDate    DateTime
+  endDate      DateTime
+
+  deleted Boolean @default(false)
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime?
+  deletedAt DateTime?
+
+  createdBy Int
+  updatedBy Int?
+  deletedBy Int?
+}
+
+model Budget {
+  id           Int      @id @default(autoincrement())
+  userId       Int
+  categoryId   Int
+  targetAmount Float
+  startDate    DateTime
+  endDate      DateTime
+
+  deleted Boolean @default(false)
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime?
+  deletedAt DateTime?
+
+  createdBy Int
+  updatedBy Int?
+  deletedBy Int?
+}
+
+model Transaction {
+  id          Int      @id @default(autoincrement())
+  description String
+  date        DateTime
+  userId      Int
+
+  transactionDetail TransactionDetail[]
+
+  deleted Boolean @default(false)
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime?
+  deletedAt DateTime?
+
+  createdBy Int
+  updatedBy Int?
+  deletedBy Int?
+}
+
+enum TransactionType {
+  DEBIT
+  CREDIT
+}
+
+model TransactionDetail {
+  id              Int             @id @default(autoincrement())
+  transactionType TransactionType
+  accountId       Int
+  amount          Float
+
+  transaction   Transaction @relation(fields: [transactionId], references: [id])
+  transactionId Int
+
+  deleted Boolean @default(false)
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime?
+  deletedAt DateTime?
+
+  createdBy Int
+  updatedBy Int?
+  deletedBy Int?
+}
